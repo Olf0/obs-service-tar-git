@@ -27,7 +27,7 @@ When the `token` parameter contains a non-empty string (not a regular expression
 ## Source archive name
 `tar_git` always renames the source archive to `<name>-<version>.<extension>`, using the processed Git tag as `<version>`.  While retaining the name and the extension, there is no way to achieve `<name>-<version>-<release>.<extension>` as its source archive, because the processing prevents any dashes ("-") to be retained in the processed `<version>` string.  If no valid {https|http|ftp} path to a source archive is provided, it performs a Git check-out using the tag determined as described above.
 
-Hence the `%prep` section of a spec file **must** contain [`%autosetup`](https://rpm-software-management.github.io/rpm/manual/autosetup.html) or `%setup [-q] [-n %{name}-%{version}]`, but no other `-n` parameter can be used (which might as well be omitted)!
+Hence the `%prep` section of a spec file **must** contain [`%autosetup`](https://rpm-software-management.github.io/rpm/manual/autosetup.html) or `%setup [-q] [-n %{name}-%{version}]`, but no other `-n` parameter can be used (which might as well be omitted, then)!
 
 ## Changelog extraction / processing
 \<ToDo\>
